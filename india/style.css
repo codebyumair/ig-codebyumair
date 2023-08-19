@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  height: 100vh;
+}
+
+.flag-container {
+  font-size: 10px;
+  width: 90em;
+  height: 50em;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+.color {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.saffron {
+  background-color: #ff9933;
+}
+.white {
+  background-color: #fff;
+}
+.green {
+  background-color: #138808;
+}
+.ashok-chakra {
+  width: 16em;
+  height: 16em;
+  position: relative;
+  border: 1em solid #000080;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spokes {
+  width: 1em;
+  height: 0;
+  position: absolute;
+  top: 7.75em;
+  left: 8em;
+  border-top: 0.25em solid transparent;
+  border-right: 2em solid #000080;
+  border-bottom: 0.25em solid transparent;
+  transform-origin: 0 0.25em;
+}
+.spokes::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -0.25em;
+  left: 3em;
+  border-top: 0.25em solid transparent;
+  border-left: 5em solid #000080;
+  border-bottom: 0.25em solid transparent;
+}
+.spokes::after {
+  content: "";
+  position: absolute;
+  width: 0.8em;
+  height: 0.8em;
+  top: 0.66em;
+  left: 7.6em;
+  background-color: #000080;
+  border-radius: 50%;
+}

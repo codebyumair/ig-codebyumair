@@ -1,0 +1,47 @@
+:root {
+  --bg: #0b0078;
+  --btn-bg: #0f0eff;
+  --toast-bg: #5f87ff;
+  --color: #f6f7f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+}
+
+#btn-toast {
+  font: bold 1em "Poppins", san-serif;
+  color: var(--color);
+  background-color: var(--btn-bg);
+  border: none;
+  border-radius: 40px;
+  padding: 1.5em 2em;
+  cursor: pointer;
+}
+
+#toast-msg {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8em;
+  color: var(--color);
+  background-color: var(--toast-bg);
+  padding: 1.2em 2.4em;
+  border-radius: 40px;
+  transition: bottom 0.4s ease;
+  font: 1em "Poppins", san-serif;
+}
+
+#toast-msg.show {
+  bottom: 2em;
+}

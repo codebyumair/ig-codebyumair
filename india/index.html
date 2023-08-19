@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>India</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="flag-container">
+      <div class="color saffron"></div>
+      <div class="color white">
+        <div class="ashok-chakra" id="chakra"></div>
+      </div>
+      <div class="color green"></div>
+    </div>
+    <script>
+      const chakra = document.getElementById("chakra");
+      for (let i = 0; i < 24; i++) {
+        const spoke = document.createElement("div");
+        spoke.className = "spokes";
+        spoke.style.transform = `rotate(${i * 15}deg)`;
+        chakra.appendChild(spoke);
+      }
+    </script>
+  </body>
+</html>

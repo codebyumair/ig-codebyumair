@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Toast</title>
+  </head>
+  <body>
+    <button id="btn-toast">Pay now</button>
+    <div id="toast-msg">Payment Successful</div>
+    <script>
+      const btnToast = document.getElementById("btn-toast");
+      const toast = document.getElementById("toast-msg");
+      btnToast.addEventListener("click", () => {
+        toast.classList.add("show");
+        setTimeout(() => {
+          toast.classList.remove("show");
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>

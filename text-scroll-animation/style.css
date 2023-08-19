@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background-color: #0b1598;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 5em;
+  position: relative;
+}
+
+.animated-text {
+  display: inline-block;
+  color: #27ff98;
+  overflow: hidden;
+  height: 1.52em;
+  vertical-align: bottom;
+}
+
+.animated-text span {
+  display: block;
+  animation: scrollText 6s infinite ease;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}
