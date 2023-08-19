@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <h3>LOGIN</h3>
+        <form>
+          <input type="text" placeholder="Username" />
+          <input type="password" id="password" placeholder="Password" />
+          <span id="msg" style="display: none">* Caps lock is on *</span>
+          <button>LOGIN</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      const password = document.getElementById("password");
+      const msg = document.getElementById("msg");
+
+      password.addEventListener("keyup", (e) => {
+        msg.style.display = e.getModifierState("CapsLock") ? "block" : "none";
+      });
+    </script>
+  </body>
+</html>
