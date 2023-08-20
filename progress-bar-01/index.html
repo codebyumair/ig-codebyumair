@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Bar</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        background-color: #000;
+        display: grid;
+        place-items: center;
+      }
+
+      .container {
+        width: 15rem;
+        height: 0.25rem;
+        background-color: #fff;
+        overflow: hidden;
+      }
+
+      .progress {
+        height: 100%;
+        transform-origin: left;
+        background-color: #6a07c6;
+        animation: progress 1s infinite;
+      }
+
+      @keyframes progress {
+        from {
+          transform: scaleX(5%) translateX(-5%);
+        }
+        to {
+          transform: scaleX(75%) translateX(130%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="progress"></div>
+    </div>
+  </body>
+</html>
