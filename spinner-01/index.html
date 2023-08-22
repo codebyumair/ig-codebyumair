@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spinner 01</title>
+    <style>
+      body {
+        background-color: #000;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+      }
+
+      .spinner {
+        display: grid;
+        place-items: center;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: conic-gradient(
+          from 180deg at 50% 50%,
+          rgba(82, 0, 255, 0) 0deg,
+          #5200ff 360deg
+        );
+        animation: spin 2s infinite linear;
+      }
+      .spinner::before {
+        content: "";
+        border-radius: 50%;
+        width: 80%;
+        height: 80%;
+        background-color: #000;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(1turn);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="spinner"></div>
+  </body>
+</html>
