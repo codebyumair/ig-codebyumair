@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bouncing Loading Animation</title>
+    <style>
+      body {
+        margin: 0;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+      }
+      .circle {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-image: linear-gradient(to top, #3f51b1, #f18271);
+        transform: translateY(-100vh);
+        animation: bouncing 2s linear infinite;
+      }
+
+      @keyframes bouncing {
+        0% {
+          transform: translateY(-100vh);
+        }
+        50% {
+          transform: translateY(20px);
+        }
+        75% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(0) scale(30);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle"></div>
+  </body>
+</html>
