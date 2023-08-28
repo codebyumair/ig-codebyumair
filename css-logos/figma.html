@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figma Logo</title>
+    <style>
+      :root {
+        --bg: #1e1e1e;
+        --red: #f24e1e;
+        --rose: #ff7262;
+        --lavender: #a259ff;
+        --turquoise: #1abcfe;
+        --bright-green: #0acf83;
+        --width: 200px;
+        --height: 100px;
+      }
+      body {
+        margin: 0;
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        background-color: var(--bg);
+      }
+
+      .figma-logo {
+        width: var(--width);
+      }
+
+      .horizontal-line {
+        height: var(--height);
+        width: calc(var(--width) / 2);
+        position: relative;
+        border-radius: 80px 0 0 80px;
+      }
+
+      .line-1 {
+        background-color: var(--red);
+      }
+
+      .line-1::after,
+      .line-2::after {
+        content: "";
+        height: var(--height);
+        width: calc(var(--width) / 2);
+        position: absolute;
+        right: -6.25rem;
+      }
+
+      .line-1::after {
+        border-radius: 0 80px 80px 0;
+        background-color: var(--rose);
+      }
+
+      .line-2 {
+        background-color: var(--lavender);
+      }
+
+      .line-2::after {
+        border-radius: 80px;
+        background-color: var(--turquoise);
+      }
+
+      .line-3 {
+        background-color: var(--bright-green);
+        border-radius: 80px 0 80px 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="figma-logo">
+      <div class="horizontal-line line-1"></div>
+      <div class="horizontal-line line-2"></div>
+      <div class="horizontal-line line-3"></div>
+    </div>
+  </body>
+</html>
