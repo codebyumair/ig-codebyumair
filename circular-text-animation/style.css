@@ -1,0 +1,43 @@
+:root {
+  --bg: #1b1b1b;
+  --color: #ffffff;
+  --border: #303030;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg);
+  display: grid;
+  place-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+#text-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  outline: 2px solid var(--border);
+  outline-offset: -50px;
+  border-radius: 50%;
+  animation: text-rotate 10s linear infinite;
+}
+
+.text-character {
+  position: absolute;
+  left: 50%;
+  color: var(--color);
+  text-transform: uppercase;
+  transform-origin: 0 125px;
+}
+
+@keyframes text-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
